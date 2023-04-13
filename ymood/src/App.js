@@ -2,6 +2,7 @@ import './App.css';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import AuthDetails from './components/AuthDetails';
+import AddEmotions from './components/AddEmotions';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <SignIn />
       <SignUp />
       <AuthDetails/>
+      <AddEmotions/>
     </div>
   );
 }

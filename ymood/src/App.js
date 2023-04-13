@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import Admin from './admin/Admin.js'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 
 function App() {
   return (
-    <Router>
+    <div className="App">
       <Routes>
-        <Route exact path="/" component={App} element={<h1>App page component</h1>} />
-        <Route path="/admin" component={Admin} element={<h1>admin page component</h1>} />
+        <Route path="/admin" element={<Admin/>} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
+
+
+const rootElement = document.querySelector("#root");
+//id is given as app
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <Router>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Router>
 );
+
+

@@ -1,25 +1,35 @@
+import background from "../asset/cloud.png"
+const containerSize = 200;
 const container = {
-    width:200,
-    height:200,
-    style:{
-        width:"200px",
-        height:"200px",
-        display:"flex",
-        flexWrap:"wrap",
-        flexDirection:"column",
-        justifyContent:"space-around",
-        alignContent:"center"
-    },
+    width:containerSize+"px",
+    height:containerSize+"px",
+    display:"flex",
+    flexWrap:"wrap",
+    flexDirection:"column",
+    justifyContent:"space-around",
+    alignContent:"center",
+    alignItems:"center",
 };
 
 export function displayContent(emotions){
-    const AreaSize = calcContainerSize(container);
+    const AreaSize = calcContainerSize();
     const emotionsWeight = getFullHeight(emotions);
+    let localheight = 0;
+    let tempwidth = 0;
+    let totalwidth = 0;
 
     const Elements = emotions.map((emo) => {
-        const area = emo.weight*AreaSize/emotionsWeight;
+        const area = emo.weight/emotionsWeight*AreaSize;
         const size = Math.floor(Math.sqrt(area));
         const fontSize = calcFontSize(emo.text,size);
+        localheight+=size;
+        if (localheight>containerSize){
+            totalwidth += tempwidth;
+            tempwidth = size;
+            localheight = size;
+        } else if (size>tempwidth){
+            tempwidth = size;
+        };
 
         const divStyle = {
             width:size,
@@ -29,13 +39,17 @@ export function displayContent(emotions){
         }
 
         return (
-            <div class="moodText" style={divStyle}>{emo.text}</div>
+            <div className="moodText" style={divStyle}>{emo.text}</div>
         )
     });
+    totalwidth += tempwidth;
+
 
     return (
-        <div id={"container"} style={container.style}>
-            {Elements}
+        <div id={"background"} style={{backgroundImage: `url(${background})`,backgroundSize: 'cover'}}>
+            <div id={"container"} style={{...container,...setMargin(totalwidth)}}>
+                {Elements}
+            </div>
         </div>
     )
 }
@@ -50,8 +64,8 @@ function getFullHeight(emotions){
     return returner
 }
 
-function calcContainerSize(container){
-    return container.width*container.height
+function calcContainerSize(){
+    return containerSize**2*0.75
 }
 
 function calcFontSize(text,maxsize){
@@ -75,4 +89,22 @@ function calcFontSize(text,maxsize){
     }
         
     return fontsize
+}
+
+function setMargin(width){
+    let totalwidth = width+100;
+    let totalheight = totalwidth*7/9;
+    console.log(totalheight,totalwidth)
+    let marginheight,marginwidth;
+    if (totalheight<width){
+        marginheight = 3;
+        marginwidth = (width*9/7-width)/2;
+    } else {
+        marginheight = (totalheight-containerSize)/2;
+        marginwidth = 2+(totalwidth-containerSize)/2;
+    }
+    return {        
+        margin:marginheight+"px",
+        marginInline:marginwidth+"px",
+    }
 }

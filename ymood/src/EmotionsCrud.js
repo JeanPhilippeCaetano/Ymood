@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db, auth } from "./firebase.js";
-import { onAuthStateChanged } from "firebase/auth";
 import { ref, get, child, push, set } from "firebase/database";
-import { collection, getDocs } from "firebase/firestore";
 
 class EmotionsCrud extends React.Component {
     constructor(props){
@@ -10,25 +8,18 @@ class EmotionsCrud extends React.Component {
         this.state = {
             database:db,
             data:{},
-            // emotions:{
-            //     1 : { name : "énervé", isPositive: false},
-            //     2 : { name : "joyeux", isPositive: true},
-            //     3 : { name : "triste", isPositive: false},
-            //     4 : { name : "inquiet", isPositive: false},
-            //     5 : { name : "serein", isPositive: true},
-            //     6 : { name : "fatigué", isPositive: false},
-            //     7 : { name : "déçu", isPositive: false},
-            //     8 : { name : "excité", isPositive: true},
-            //     9 : { name : "frustré", isPositive: false},
-            //     10 : { name : "soulagé", isPositive: true},
-            // },
-            // admins:{
-            //     jp:"WDzweZbWbmM1WgnrCDsPL2X7w282",
-            //     emile:"knKcXFBWX3Zduk3bXXZJNccQoHv2"
-            // },
-            // year:'',
-            // month:'',
-            // day:''
+            emotions: {
+                1 : { name : "énervé", isPositive: false},
+                2 : { name : "joyeux", isPositive: true},
+                3 : { name : "triste", isPositive: false},
+                4 : { name : "inquiet", isPositive: false},
+                5 : { name : "serein", isPositive: true},
+                6 : { name : "fatigué", isPositive: false},
+                7 : { name : "déçu", isPositive: false},
+                8 : { name : "excité", isPositive: true},
+                9 : { name : "frustré", isPositive: false},
+                10 : { name : "soulagé", isPositive: true},
+            }
         }
     }
 
@@ -45,7 +36,7 @@ class EmotionsCrud extends React.Component {
     }
 
     initEmotions() {
-        set(ref(this.state.database, "/emotions/"), this.emotions)
+        set(ref(this.state.database, "/emotions/"), this.state.emotions)
     }
 
     createEmotion(path, emotion) {

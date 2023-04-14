@@ -5,17 +5,18 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import AuthDetails from './components/AuthDetails';
 import AddEmotions from './components/AddEmotions';
-import './App.css';;
+import EmotionsCrud from './EmotionsCrud.js';
 
 function App() {
+  const t = new EmotionsCrud();
+  t.initEmotions();
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/extranet" element = {<Extranet />} />
-        <Route path="/add-emotion/:id" element = {<Extranet />}/>
       </Routes>
-    
+
       <SignIn />
       <SignUp />
       <AuthDetails/>

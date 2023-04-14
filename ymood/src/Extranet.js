@@ -1,47 +1,53 @@
 import img from './logo_ynov_campus_rvb.png';
-import './Extranet.css';
+import { displayContent } from './components/wordLoader';
+import { displayButtons } from './components/buttons';
+import EmotionsCrud from './EmotionsCrud';
 
-function Extranet() {
+// const emotions = [
+//   {
+//     text:"joie",
+//     weight:90,
+//     isPositive:true,
+//   },
+//   {
+//     text:"colère",
+//     weight:30,
+//     isPositive:false,
+//   },
+//   {
+//     text:"tristesse",
+//     weight:205,
+//     isPositive:false,
+//   },
+//   {
+//     text:"neutre",
+//     weight:60,
+//     isPositive:null,
+//   }
+// ]
+
+async function getAllEmotionsData() {
+  const emotionsCrud = new EmotionsCrud();
+  let emotions = []
+  let now = new Date()
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const emotionsNames = await emotionsCrud.readData("/emotions/");
+  emotionsNames.forEach(async (element, index) => {
+    const count = await emotionsCrud.readData(`/values/${year}/${month}/${day}/${index}`);
+    emotions.push({text:element.name, weight: count, isPositive: element.isPositive})
+  });
+  return emotions;
+}
+
+async function Extranet() {
+  const emotions = await getAllEmotionsData()
+  console.log(emotions)
   return (
-    <div className="conteneur">
-      <nav className="navtop">
-        <img id="Ymage" src={img} />
-        <ul id="Yul">
-          <div>fr</div>
-          <div>en</div>
-          <div>Ymail@ynov.com</div>
-        </ul>
-      </nav>
-      <div className="Ycloud">JE SUIS LE YCLOUD</div>
-      <div className="Ydoc">
-        <button>Tout</button>
-        <button>Scolarité</button>
-        <button>Promotions et partenariats</button>
-        <button>Documents</button>
-      </div>
-      <div className="Ybiggrid">
-        <div className="Yhypperplan"><div className="texth">Hyperplanning</div></div>
-        <div className="Ydossier"></div>
-        <div className="Ymatch"></div>
-        <div className="YoffreAuto"></div>
-        <div className="Yprof"></div>
-        <div className="YoffrePc"></div>
-        <div className="Yisic"></div>
-        <div className="Ymater"></div>
-        <div className="Ymicro"></div>
-        <div className="Yammer"></div>
-        <div className="Ymail"></div>
-        <div className="Yreglement"></div>
-        <div className="Ylearning"></div>
-        <div className="Ypeda"></div>
-        <div className="Ybrand"></div>
-        <div className="Yadobe"></div>
-        <div className="Ychart"></div>
-        <div className="Ysoftware"></div>
-        <div className="Ygit"></div>
-        <div className="Ydoss"></div>
-        <div className="Yfisio"></div>
-      </div>
+    <div>
+      {displayContent(emotions)}
+      {displayButtons(emotions)}
     </div>
   )
 }

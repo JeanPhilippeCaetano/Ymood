@@ -12,7 +12,7 @@ const emotions = [
   },
   {
     text:"tristesse",
-    weight:25,
+    weight:205,
   },
   {
     text:"neutre",
@@ -53,7 +53,7 @@ const emotions2 = [
 const emotions3 = [
   {
     text:"joie",
-    weight:45,
+    weight:450,
   },
   {
     text:"colère",

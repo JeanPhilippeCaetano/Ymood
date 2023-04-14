@@ -1,0 +1,791 @@
+@media screen and (max-width: 800px){
+  .navtop {
+    margin-left: 10px;
+  }
+  #Ymage {
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  #Yul {
+    margin-left: 420px;
+    margin-top: 1px;
+  }
+  
+  #Yul div{
+    display: inline;
+    margin-left: 1.5em;
+    color: #EC4363;
+  }
+  
+  .Ycloud {
+    margin-left: 20em;
+  }
+  
+  .Ydoc {
+    display: grid;
+    margin-left: 6em;
+    margin-top: 3.5em;
+    height: 20px;
+    width: 600px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  .Ydoc button{
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid rgb(201, 201, 201);
+    color: #EC4363;
+  }
+  
+  .Ydoc button:hover {
+    background-color: rgb(206, 206, 206);
+    color: black;
+    cursor: pointer;
+  }
+  
+  .Ybiggrid {
+    display: grid;
+    height: 950px;
+    width: 600px;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 4px;
+    row-gap: 4px;
+    margin-top: 3em;
+    margin-left: 6em;
+  }
+  
+  .Yhypperplan {
+    display: flex;
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 1;
+    grid-column-end: 3;
+ 
+    flex-direction: column-reverse;
+  }
+  
+  .texth {
+    color: white;
+  }
+  
+  
+  .Ydossier {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ymatch {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .YoffreAuto {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 7;
+    grid-column-end: 8; 
+  }
+  
+  .Yprof {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  
+  .YoffrePc {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Yisic {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ymater {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ymicro {
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+  .Yammer {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  
+  .Ymail {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+  
+  .Yreglement {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 3;
+    grid-column-end: 5; 
+  }
+  
+  .Ylearning {
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end:6 ;
+  }
+  
+  .Ypeda {
+    background-color: rgb(255, 144, 176);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ybrand {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Yadobe {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ychart {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .Ysoftware {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ygit {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+  .Ydoss {
+    background-color: rgb(255, 144, 176);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Yfisio {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+  .navtop {
+    margin-left: 100px;
+  }
+  #Ymage {
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  #Yul {
+    margin-left: 460px;
+    margin-top: 1px;
+  }
+  
+  #Yul div{
+    display: inline;
+    margin-left: 2em;
+    color: #EC4363;
+  }
+  
+  .Ycloud {
+    margin-left: 25em;
+  }
+  
+  .Ydoc {
+    display: grid;
+    margin-left: 6em;
+    margin-top: 3.5em;
+    height: 20px;
+    width: 800px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  .Ydoc button{
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid rgb(201, 201, 201);
+    color: #EC4363;
+  }
+  
+  .Ydoc button:hover {
+    background-color: rgb(206, 206, 206);
+    color: black;
+    cursor: pointer;
+  }
+  
+  .Ybiggrid {
+    display: grid;
+    height: 950px;
+    width: 800px;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 4px;
+    row-gap: 4px;
+    margin-top: 3em;
+    margin-left: 6em;
+  }
+  
+  .Yhypperplan {
+    display: flex;
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    flex-direction: column-reverse;
+  }
+  
+  .texth {
+    color: white;
+  }
+  
+  
+  .Ydossier {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ymatch {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .YoffreAuto {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 7;
+    grid-column-end: 8; 
+  }
+  
+  .Yprof {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  
+  .YoffrePc {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Yisic {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ymater {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ymicro {
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+  .Yammer {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  
+  .Ymail {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+  
+  .Yreglement {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 3;
+    grid-column-end: 5; 
+  }
+  
+  .Ylearning {
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end:6 ;
+  }
+  
+  .Ypeda {
+    background-color: rgb(255, 144, 176);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ybrand {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Yadobe {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ychart {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .Ysoftware {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ygit {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+  .Ydoss {
+    background-color: rgb(255, 144, 176);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Yfisio {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: 1400px ) and (min-width:1000px){
+  .navtop {
+    margin-left: 150px;
+  }
+  #Ymage {
+    width: 120px;
+    height: 60px;
+    margin-left: 10px;
+  }
+  #Yul {
+    margin-left: 580px;
+    margin-top: 1px;
+  }
+  
+  #Yul div{
+    display: inline;
+    margin-left: 2em;
+    color: #EC4363;
+  }
+  
+  .Ycloud {
+    margin-left: 30em;
+  }
+  
+  .Ydoc {
+    display: grid;
+    margin-left: 14em;
+    margin-top: 3.5em;
+    height: 30px;
+    width: 800px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+  }
+  
+  .Ydoc button{
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid rgb(201, 201, 201);
+    color: #EC4363;
+  }
+  
+  .Ydoc button:hover {
+    background-color: rgb(206, 206, 206);
+    color: black;
+    cursor: pointer;
+  }
+  
+  .Ybiggrid {
+    display: grid;
+    height: 950px;
+    width: 900px;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 4px;
+    row-gap: 4px;
+    margin-top: 3em;
+    margin-left: 12em;
+  }
+  
+  .Yhypperplan {
+    display: flex;
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    flex-direction: column-reverse;
+  }
+  
+  .texth {
+    color: white;
+  }
+  
+  
+  .Ydossier {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ymatch {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .YoffreAuto {
+    background-color: rgb(102, 102, 102);
+    grid-column-start: 7;
+    grid-column-end: 8; 
+  }
+  
+  .Yprof {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  
+  .YoffrePc {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Yisic {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ymater {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ymicro {
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+  .Yammer {
+    background-color: rgb(204, 204, 204);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  
+  .Ymail {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+  
+  .Yreglement {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 3;
+    grid-column-end: 5; 
+  }
+  
+  .Ylearning {
+    background-color: rgb(51, 225, 207);
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end:6 ;
+  }
+  
+  .Ypeda {
+    background-color: rgb(255, 144, 176);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ybrand {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Yadobe {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Ychart {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .Ysoftware {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .Ygit {
+    background-color: rgb(236, 67, 99);
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+  
+  .Ydoss {
+    background-color: rgb(255, 144, 176);
+    grid-column-start: 7;
+    grid-column-end: 8;
+  }
+  
+  .Yfisio {
+    background-color: rgb(0, 174, 156);
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+  
+
+#Yul div{
+  /* display: inline; */
+  color: #EC4363;
+}
+
+.Ycloud {
+}
+
+.Ydoc {
+  display: grid;
+  margin-top: 3.5em;
+  height: 30px;
+  width: 800px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+}
+
+.Ydoc button{
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid rgb(201, 201, 201);
+  color: #EC4363;
+}
+
+.Ydoc button:hover {
+  background-color: rgb(206, 206, 206);
+  color: black;
+  cursor: pointer;
+}
+
+.Ybiggrid {
+  display: grid;
+  height: 1100px;
+  width: 1000px;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 4px;
+  row-gap: 4px;
+  margin-top: 3em;
+}
+
+.Yhypperplan {
+  display: flex;
+  background-color: blue;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  flex-direction: column-reverse;
+}
+
+.texth {
+  color: white;
+}
+
+
+.Ydossier {
+  background-color: red;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.Ymatch {
+  background-color: green;
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.YoffreAuto {
+  background-color: violet;
+  grid-column-start: 7;
+  grid-column-end: 8; 
+}
+
+.Yprof {
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.YoffrePc {
+  background-color: blue;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.Yisic {
+  background-color: red;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+.Ymater {
+  background-color: red;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.Ymicro {
+  background-color: violet;
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+.Yammer {
+  background-color: blue;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+
+.Ymail {
+  background-color: blue;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+.Yreglement {
+  background-color: violet;
+  grid-column-start: 3;
+  grid-column-end: 5; 
+}
+
+.Ylearning {
+  background-color: red;
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end:6 ;
+}
+
+.Ypeda {
+  background-color: green;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+.Ybrand {
+  background-color: yellowgreen;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.Yadobe {
+  background-color: pink;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+.Ychart {
+  background-color: rgb(99, 19, 32);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.Ysoftware {
+  background-color: rgb(5, 124, 139);
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.Ygit {
+  background-color: rgb(53, 231, 9);
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+.Ydoss {
+  background-color: rgb(231, 9, 131);
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+.Yfisio {
+  background-color: rgb(168, 9, 231);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

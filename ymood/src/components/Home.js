@@ -1,8 +1,16 @@
 import React from 'react';
+import Emile from '../static/Emile.png'
+import Bastien from '../static/Bastien.jpg'
+import JP from '../static/JP.jpg'
+import Hugo from '../static/Hugo.png'
+import Aymeric from '../static/Aymeric.jpg'
+import Tanguy from '../static/Tanguy.png'
+
 
 function Home() {
   return(
     <div>
+        <link rel="stylesheet" href="../Template.css"></link>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Ymood - Challenge 48h</a>
@@ -33,7 +41,8 @@ function Home() {
             </div>
             <div className="row">
                 <div className="col-md-8 d-flex align-items-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum fringilla neque at cursus. Phasellus feugiat erat in blandit laoreet. Nullam neque leo, luctus consectetur neque vel, blandit molestie nunc. Donec tellus sapien, tincidunt non leo dapibus, pellentesque ullamcorper augue. Suspendisse potenti. Mauris egestas ex ut tellus pulvinar cursus. Pellentesque vel tincidunt felis. Integer tempus risus tortor. Sed tincidunt, ex in tempus fermentum, nisi risus dignissim diam, quis elementum diam lectus venenatis arcu. Aliquam justo nibh, commodo eget metus sit amet, eleifend aliquet mi. Cras est leo, egestas sit amet placerat sollicitudin, blandit quis mi. Ut libero ligula, sagittis a ligula et, ultrices gravida purus.
+                    <p>
+                      Ymood est un sondage pour les étudiants qui permet de connaître l'humeur générale d'une école.
                     </p>
                 </div>
                 
@@ -53,28 +62,18 @@ function Home() {
       <div className="row justify-content-center mb-5">
         <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div className="card">
-          <img src="lorem-ipsum.jpg" class="card-img-top" alt="Etudiant 1"/>
+          <img src={Tanguy} class="card-img-top" alt="Etudiant 1"/>
             <div class="card-body">
-              <h5 class="card-title">NOM PRENOM</h5>
+              <h5 class="card-title">MEIGNIER Tanguy</h5>
               <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="card">
-          <img src="lorem-ipsum.jpg" class="card-img-top" alt="Etudiant 1"/>
+          <img src={Hugo} class="card-img-top" alt="Etudiant 1"/>
             <div class="card-body">
-              <h5 class="card-title">NOM PRENOM</h5>
-              <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="card">
-          <img src="lorem-ipsum.jpg" class="card-img-top" alt="Etudiant 1"/>
-            <div class="card-body">
-              <h5 class="card-title">NOM PRENOM</h5>
+              <h5 class="card-title">ROUMAGNE Hugo</h5>
               <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
             </div>
           </div>
@@ -82,9 +81,9 @@ function Home() {
 
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="card">
-          <img src="lorem-ipsum.jpg" class="card-img-top" alt="Etudiant 1"/>
+          <img src={JP} class="card-img-top" alt="Etudiant 1"/>
             <div class="card-body">
-              <h5 class="card-title">NOM PRENOM</h5>
+              <h5 class="card-title">CAETANO Jean-Philippe</h5>
               <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
             </div>
           </div>
@@ -92,9 +91,9 @@ function Home() {
 
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="card">
-          <img src="lorem-ipsum.jpg" class="card-img-top" alt="Etudiant 1"/>
+          <img src={Emile} class="card-img-top" alt="Etudiant 1"/>
             <div class="card-body">
-              <h5 class="card-title">NOM PRENOM</h5>
+              <h5 class="card-title">SEGURET Emile</h5>
               <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
             </div>
           </div>
@@ -102,9 +101,19 @@ function Home() {
 
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
           <div class="card">
-          <img src="lorem-ipsum.jpg" class="card-img-top" alt="Etudiant 1"/>
+          <img src={Aymeric} class="card-img-top" alt="Etudiant 1"/>
             <div class="card-body">
-              <h5 class="card-title">NOM PRENOM</h5>
+              <h5 class="card-title">KREUZER Aymeric</h5>
+              <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="card">
+          <img src={Bastien} class="card-img-top" alt="Etudiant 1"/>
+            <div class="card-body">
+              <h5 class="card-title">LOCATELLI Bastien</h5>
               <p class="card-text">Ici, je décris mon rôle et les tâches que j'ai effectuées</p>
             </div>
           </div>
@@ -165,7 +174,7 @@ function Home() {
             <div class="card-body">
               <h5 class="card-title">Github</h5>
               <p class="card-text">Consultez notre code source et notre organisation sur Github.</p>
-              <a href="https://github.com/votrenom/votreprojet" class="btn btn-primary">Visiter</a>
+              <a href="https://github.com/JeanPhilippeCaetano/Ymood/tree/main/ymood" class="btn btn-primary">Visiter</a>
             </div>
           </div>
         </div>

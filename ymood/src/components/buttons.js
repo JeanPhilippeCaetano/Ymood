@@ -136,8 +136,8 @@ function upVote(emote){
 
 function emoteButtons(emotes){
     const buttonList = emotes.map((emote) => (
-    <button onClick={upVote(emote)}>
-      {emote}
+    <button onClick={upVote(emote.text)}>
+      {emote.text}
     </button>
   ));
 
@@ -152,9 +152,9 @@ export function displayButtons(){
   return (
     <div className="App">
       <div style={{display:"flex",flexDirection: "column",alignItems: "center"}}>
-        {displayContent(emotions)}
-        {displayContent(emotions2)}
-        {displayContent(emotions3)}
+        {emoteButtons(emotions)}
+        {emoteButtons(emotions2)}
+        {emoteButtons(emotions3)}
       </div>
     </div>
   )

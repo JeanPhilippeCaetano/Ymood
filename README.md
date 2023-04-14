@@ -11,8 +11,14 @@ Il sera facilement intégrable.
     
 ## 🛠️ Install Dependencies    
 ```bash
+(node.js est un prérequis)
 cd ymood
 npm install
+```
+
+## 🛠️ Start the server   
+```bash
+npm start
 ```
 
 ## Exemple d'intégration:

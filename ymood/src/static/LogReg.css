@@ -50,16 +50,31 @@ input:focus {
 .login-btn {
     width: 40%;
     height: 3em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
     background-color: rgb(32, 177, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.1s;
     border-radius: 0.5em;
     cursor: pointer;
 }
 
-.login-btn:hover { transform: scale(1.25);}
+.login-btn:hover { transform: scale(1.1);}
+
+.redirection-button {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(32, 177, 255);
+    padding: 7px 10px 7px 10px;
+    border-radius: 0.5em;
+    transition: 0.1s;
+}
+
+.redirection-button:hover { transform: scale(1.1);}
 
 .text {
     position: relative;

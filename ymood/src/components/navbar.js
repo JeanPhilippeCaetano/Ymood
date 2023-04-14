@@ -1,12 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import AuthProvider from "../AuthProvider";
 
 const Navbar = () => {
+    const [authUser, setAuthUser] = useState(null);
+
+    useEffect(() => {
+        const listen = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setAuthUser(user)
+            } else {
+                setAuthUser(null)
+            }
+        });
+        return () => {
+            listen();
+        }
+    }, [])
+
     const userSignOut = () => {
-        AuthProvider.logout()
-        .catch((error) => console.log(error))
+        signOut(auth)
+        .then((user) => {console.log(user)})
+        .catch((err) => {console.log(err)});
     }
 
     return (
@@ -30,9 +45,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link" href="/#liens-pratiques">Liens pratiques</a>
                         </li>
-                        {AuthProvider.getUser() ? (
+                        {authUser ? (
                             <li className="nav-item">
-                                <a className="nav-link" onClick={userSignOut}> Se déconnecter {`${AuthProvider.getUser().email}`} </a>
+                                <a className="nav-link" onClick={userSignOut}> Se déconnecter {`${authUser.email}`} </a>
                             </li>
                         ) : (
                             <li className="nav-item">

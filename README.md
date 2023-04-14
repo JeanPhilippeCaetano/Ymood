@@ -2,36 +2,32 @@
 Challenge 48h
 
 
-# <p align="center">Title</p>
+# <p align="center">Ymood</p>
   
-Your description here
-    
-## 🧐 Features    
-- Feature 1
-- Feature 2
-- Feature 3
+Challenge 48h
+Le projet est de créer un "nuage" représentant l'humeur générale des étudiants sur la semaine.
+Il sera facilement intégrable.
         
 ## 🛠️ Tech Stack
-- [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [React]
+- [Firebase]
+- [NoSQL]
     
 ## 🛠️ Install Dependencies    
 ```bash
-npm install package-name
+npm install
 ```
         
 ## 🙇 Author
-#### Saurabh Chauhan
-- Twitter: [@saurra3h](https://twitter.com/saurra3h)
-- Github: [@starc007](https://github.com/starc007)
+#### Hugo Roumagne
         
 
 
 
-Le projet est de créer un "nuage" représentant l'humeur générale des étudiants sur la semaine.
-Il sera facilement intégrable.
+
+
+
+
 
 Exemple d'intégration:
 Les étudiants se connectent à l'extranet ynov, le nuage apparaît sur le site, si l'humeur générale est joyeuse,

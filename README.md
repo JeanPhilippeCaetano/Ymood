@@ -1,7 +1,3 @@
-# Ymood
-Challenge 48h
-
-
 # <p align="center">Ymood</p>
   
 Challenge 48h

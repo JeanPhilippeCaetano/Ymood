@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/extranet" element = {<Extranet />} />
+        <Route path="/add-emotion/:id" element = {<Extranet />}/>
       </Routes>
     
       <SignIn />

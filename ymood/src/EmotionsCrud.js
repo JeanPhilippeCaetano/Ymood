@@ -65,20 +65,15 @@ class EmotionsCrud extends React.Component {
     }
 
     async readData(path) {
-        // let variable;
         return get(ref(this.state.database, path)).then((snapshot) => {
             if (snapshot.exists()) {
-                // variable = snapshot.val()
-                // console.log(snapshot.val());
                 return snapshot.val()
             } else {
                 return 0;
-                // variable = 0;
             }
           }).catch((error) => {
             console.error(error);
           });
-        // return variable;
     }
    
 }

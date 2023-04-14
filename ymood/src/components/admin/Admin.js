@@ -3,6 +3,8 @@ import { Button, Input, Form, Select, Divider, Space } from 'antd';
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import BarChart from './bar-chart.js';
+import { func } from 'prop-types';
+import { async } from 'q';
 
 function Admin() {
 
@@ -230,7 +232,7 @@ function Admin() {
       }
   }}
 
-  const dateSouhaitée = "7/04/2023"
+  const dateSouhaitée = "07/04/2023"
 
   // Convertion de la date en un array "01/01/1999" => ["01", "01", "1999"]
   const date = new Array(dateSouhaitée.split('/'))[0]
@@ -306,8 +308,8 @@ function Admin() {
     dailyData[index] = tempArray[index][0]
     Emotions[index] = tempArray[index][1]
   }
-  
-  Chart.register(CategoryScale);
+
+
 
   function Dataviz() {
     const [chartData, setChartData] = useState({
@@ -328,8 +330,6 @@ function Admin() {
       </div>
     );
   }
-
-  // ----------------------
 
   return (
     <div style={{ paddingLeft: 30, paddingTop: 30 }}>
@@ -408,7 +408,13 @@ function Admin() {
         </Form.Item>
       </Form>
       <Divider/>
-      <Dataviz/>
+
+      <div>
+        <input type='date' id='input-date'></input>
+      </div>
+      <div id='chart-div'>
+        <Dataviz/>
+      </div>
     </div>
   );
 }

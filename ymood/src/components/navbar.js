@@ -1,35 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import AuthProvider from "../AuthProvider";
 
 const Navbar = () => {
-    const [authUser, setAuthUser] = useState(null);
-
-    useEffect(() => {
-        const listen = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setAuthUser(user)
-            } else {
-                setAuthUser(null)
-            }
-        });
-        return () => {
-            listen();
-        }
-    }, [])
-
     const userSignOut = () => {
-        signOut(auth)
-            .then(() => {
-                console.log('sign out successful')
-            })
-            .catch((error) => console.log(error))
+        AuthProvider.logout()
+        .catch((error) => console.log(error))
     }
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <a className="navbar-brand" href="#">Ymood - Challenge 48h</a>
+                <a className="navbar-brand" href="/#">Ymood - Challenge 48h</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -47,9 +30,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link" href="/#liens-pratiques">Liens pratiques</a>
                         </li>
-                        {authUser ? (
+                        {AuthProvider.getUser() ? (
                             <li className="nav-item">
-                                <a className="nav-link" onClick={userSignOut}> Se déconnecter {`${authUser.email}`} </a>
+                                <a className="nav-link" onClick={userSignOut}> Se déconnecter {`${AuthProvider.getUser().email}`} </a>
                             </li>
                         ) : (
                             <li className="nav-item">

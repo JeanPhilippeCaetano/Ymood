@@ -1,9 +1,9 @@
-import Emile from '../static/Emile.png'
-import Bastien from '../static/Bastien.jpg'
-import JP from '../static/JP.jpg'
-import Hugo from '../static/Hugo.png'
-import Aymeric from '../static/Aymeric.jpg'
-import Tanguy from '../static/Tanguy.png'
+import Emile from '../assets/Emile.png'
+import Bastien from '../assets/Bastien.jpg'
+import JP from '../assets/JP.jpg'
+import Hugo from '../assets/Hugo.png'
+import Aymeric from '../assets/Aymeric.jpg'
+import Tanguy from '../assets/Tanguy.png'
 
 const Team = () => {
     return (

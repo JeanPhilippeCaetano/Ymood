@@ -25,6 +25,10 @@ const Links = () => {
                     </div>
                 </div>
             </div>
+            <hr />
+            <div class="text-center mb-3">
+                Fait avec amour pour le Challenge 48h
+            </div>
         </>
     )
 }

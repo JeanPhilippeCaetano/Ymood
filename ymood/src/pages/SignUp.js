@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { auth } from "../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import "../static/LogIn.css"
 import Navbar from "../components/navbar";
+import AuthProvider from "../AuthProvider";
+import "../static/LogIn.css"
 
 const SignUp = () => {
     const [email, setEmail] = useState("");
@@ -10,15 +9,10 @@ const SignUp = () => {
 
     const signUp = (text) => {
         text.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in 
-                console.log(userCredential)
-                // ...
-            })
-            .catch((error) => {
-                console.log(error)
-            });
+        AuthProvider.register(email, password)
+        .catch((err) => {
+            console.log(err);
+        })
     }
 
     return (

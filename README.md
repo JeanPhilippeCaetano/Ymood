@@ -16,7 +16,9 @@ cd ymood
 npm install
 ```
 
-## 🛠️ Start the server   
+## 🛠️ Start the server
+A noter qu'il ne devrait pas être nécessaire de lancer le site en local car il est déployé à cette URL :
+https://ymood-ce910.web.app/
 ```bash
 npm start
 ```

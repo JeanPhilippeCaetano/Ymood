@@ -1,4 +1,7 @@
 import background from "../asset/cloud.png"
+import sun from "../asset/Soleil.png"
+import rain from "../asset/rain.png"
+
 const containerSize = 200;
 const container = {
     width:containerSize+"px",
@@ -16,9 +19,11 @@ const justify = [{marginTop:"auto"},{marginBottom:"auto"},{}]
 export function displayContent(emotions){
     const AreaSize = calcContainerSize();
     const emotionsWeight = getFullWeight(emotions);
+    const limit = emotionsWeight/3;
     let localheight = 0;
     let tempwidth = 0;
     let totalwidth = 0;
+    let mood = 0;
 
     const Elements = emotions.map((emo) => {
         const ratio = emo.weight*emo.text.length/emotionsWeight;
@@ -34,6 +39,12 @@ export function displayContent(emotions){
             tempwidth = size;
         };
 
+        if (emo.isPositive){
+            mood += emo.weight;
+        } else if (!emo.isPositive){
+            mood -= emo.weight;
+        };
+
         const divStyle = {
             width:size,
             height:size,
@@ -41,21 +52,55 @@ export function displayContent(emotions){
             fontSize:fontSize+"px",
             alignSelf:align[rand(0,2)],
         }
-
+        
         return (
             <div className="moodText" style={{...divStyle,...justify[rand(0,2)]}}>{emo.text}</div>
-        )
+            )
+
     });
     totalwidth += tempwidth;
 
-
-    return (
-        <div id={"background"} style={{backgroundImage: `url(${background})`,backgroundSize: 'cover'}}>
-            <div id={"container"} style={{...container,...setMargin(totalwidth)}}>
-                {Elements}
+    let render = function(){
+        return (
+            <div id={"background"} style={{backgroundImage: `url(${background})`,backgroundSize: 'cover',position:"relative",zIndex:1,}}>
+                <div id={"container"} style={{...container,...setMargin(totalwidth)}}>
+                    {Elements}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+    const cloud = render();
+
+    mood=-1000
+    if (mood >= limit){
+        const sunStyle = {
+            width:containerSize/2+"px",
+            height:containerSize/2+"px",
+            position:"absolute",
+        }
+        return (
+
+            <div style={{display:"flex"}}>
+                <img id={"Sun"} style={sunStyle} src={sun}/>
+                {cloud}
+            </div>
+            
+        )
+    } else if (mood <= -limit){
+        const rainStyle = {
+            width:containerSize,
+            height:containerSize/4,
+        }
+        return (
+
+            <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+                {cloud}
+                <img id={"Rain"} style={rainStyle} src={rain}/>
+            </div>
+        )
+    }
+
+    return cloud
 }
 
 function getFullWeight(emotions){

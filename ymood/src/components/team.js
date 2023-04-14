@@ -14,59 +14,59 @@ const Team = () => {
             <div className="row justify-content-center mb-5">
                 <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div className="card">
-                        <img src={Tanguy} class="card-img-top" alt="Etudiant 1" />
-                        <div class="card-body">
-                            <h5 class="card-title">MEIGNIER Tanguy</h5>
-                            <p class="card-text">Documentation technique, Dataviz, remplissage template</p>
+                        <img src={Tanguy} className="card-img-top" alt="Etudiant 1" />
+                        <div className="card-body">
+                            <h5 className="card-title">MEIGNIER Tanguy</h5>
+                            <p className="card-text">Documentation technique, Dataviz, remplissage template</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="card">
-                        <img src={Hugo} class="card-img-top" alt="Etudiant 1" />
-                        <div class="card-body">
-                            <h5 class="card-title">ROUMAGNE Hugo</h5>
-                            <p class="card-text">Panel admin</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="card">
-                        <img src={JP} class="card-img-top" alt="Etudiant 1" />
-                        <div class="card-body">
-                            <h5 class="card-title">CAETANO Jean-Philippe</h5>
-                            <p class="card-text">Chef d'équipe, organisation, Trello, BDD</p>
+                <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div className="card">
+                        <img src={Hugo} className="card-img-top" alt="Etudiant 1" />
+                        <div className="card-body">
+                            <h5 className="card-title">ROUMAGNE Hugo</h5>
+                            <p className="card-text">Panel admin</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="card">
-                        <img src={Emile} class="card-img-top" alt="Etudiant 1" />
-                        <div class="card-body">
-                            <h5 class="card-title">SEGURET Emile</h5>
-                            <p class="card-text">BDD, login/register, cookie</p>
+                <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div className="card">
+                        <img src={JP} className="card-img-top" alt="Etudiant 1" />
+                        <div className="card-body">
+                            <h5 className="card-title">CAETANO Jean-Philippe</h5>
+                            <p className="card-text">Chef d'équipe, organisation, Trello, BDD</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="card">
-                        <img src={Aymeric} class="card-img-top" alt="Etudiant 1" />
-                        <div class="card-body">
-                            <h5 class="card-title">KREUZER Aymeric</h5>
-                            <p class="card-text">Création/modification du sondage (nuage), Front</p>
+                <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div className="card">
+                        <img src={Emile} className="card-img-top" alt="Etudiant 1" />
+                        <div className="card-body">
+                            <h5 className="card-title">SEGURET Emile</h5>
+                            <p className="card-text">BDD, login/register, cookie</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div class="card">
-                        <img src={Bastien} class="card-img-top" alt="Etudiant 1" />
-                        <div class="card-body">
-                            <h5 class="card-title">LOCATELLI Bastien</h5>
-                            <p class="card-text">Front, Dataviz</p>
+                <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div className="card">
+                        <img src={Aymeric} className="card-img-top" alt="Etudiant 1" />
+                        <div className="card-body">
+                            <h5 className="card-title">KREUZER Aymeric</h5>
+                            <p className="card-text">Création/modification du sondage (nuage), Front</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div className="card">
+                        <img src={Bastien} className="card-img-top" alt="Etudiant 1" />
+                        <div className="card-body">
+                            <h5 className="card-title">LOCATELLI Bastien</h5>
+                            <p className="card-text">Front, Dataviz</p>
                         </div>
                     </div>
                 </div>

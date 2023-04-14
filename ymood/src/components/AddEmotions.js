@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { db, auth } from "../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import React, { useState } from "react";
+import { db } from "../firebase";
 import { ref, get, child, push, set } from "firebase/database";
+import AuthProvider from "../AuthProvider";
 
 const AddEmotions = () => {
-    const [authUser, setAuthUser] = useState(null);
     const [emotion, setEmotion] = useState({ name: "", isPositive: true });
 
     let now = new Date()
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
     const day = now.getDate();
-
-    useEffect(() => {
-        const listen = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setAuthUser(user)
-            } else {
-                setAuthUser(null)
-            }
-        });
-        return () => {
-            listen();
-        }
-    }, [])
 
     const initWeek = () => {
         set(ref(db, `/${year}/${month}/${day}/`))
@@ -64,9 +50,9 @@ const AddEmotions = () => {
     }
 
     return (
-        <div> {authUser ? (
+        <div> {AuthProvider.getUser() ? (
             <>
-                <p>{`Signed In as ${authUser.email}`}</p>
+                <p>{`Signed In as ${AuthProvider.getUser().email}`}</p>
                 <button onClick={initWeek}> Enervé </button>
             </>
         ) : (

@@ -24,7 +24,7 @@ const Presentation = () => {
           <div className="col-md-4 d-flex align-items-center">
             <img src="mockup.png" alt="mockup" className="img-fluid mx-auto d-block" />
           </div>
-          <a href="/extranet" class="btn btn-primary col-md-1 d-flex">En savoir plus</a>
+          <a href="/extranet" className="btn btn-primary col-md-1 d-flex">En savoir plus</a>
 
         </div>
         <br />

@@ -93,15 +93,14 @@ function calcFontSize(text,maxsize){
 
 function setMargin(width){
     let totalwidth = width+100;
-    let totalheight = totalwidth*7/9;
-    console.log(totalheight,totalwidth)
+    let totalheight = totalwidth*535/703;
     let marginheight,marginwidth;
     if (totalheight<width){
-        marginheight = 3;
-        marginwidth = (width*9/7-width)/2;
+        marginheight = 0;
+        marginwidth = (width*703/535-width)/2;
     } else {
         marginheight = (totalheight-containerSize)/2;
-        marginwidth = 2+(totalwidth-containerSize)/2;
+        marginwidth = (totalwidth-containerSize)/2;
     }
     return {        
         margin:marginheight+"px",

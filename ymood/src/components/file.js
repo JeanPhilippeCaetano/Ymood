@@ -11,7 +11,7 @@ const Links = () => {
                         <div class="card-body">
                             <h5 class="card-title">Github</h5>
                             <p class="card-text">Consultez notre code source et notre organisation sur Github.</p>
-                            <a href="https://github.com/votrenom/votreprojet" class="btn btn-primary">Visiter</a>
+                            <a href="https://github.com/JeanPhilippeCaetano/Ymood/tree/main/ymood" class="btn btn-primary">Visiter</a>
                         </div>
                     </div>
                 </div>

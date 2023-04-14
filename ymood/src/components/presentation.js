@@ -8,7 +8,16 @@ const Presentation = () => {
         </div>
         <div className="row">
           <div className="col-md-8 d-flex align-items-center">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum fringilla neque at cursus. Phasellus feugiat erat in blandit laoreet. Nullam neque leo, luctus consectetur neque vel, blandit molestie nunc. Donec tellus sapien, tincidunt non leo dapibus, pellentesque ullamcorper augue. Suspendisse potenti. Mauris egestas ex ut tellus pulvinar cursus. Pellentesque vel tincidunt felis. Integer tempus risus tortor. Sed tincidunt, ex in tempus fermentum, nisi risus dignissim diam, quis elementum diam lectus venenatis arcu. Aliquam justo nibh, commodo eget metus sit amet, eleifend aliquet mi. Cras est leo, egestas sit amet placerat sollicitudin, blandit quis mi. Ut libero ligula, sagittis a ligula et, ultrices gravida purus.
+            <p>
+            Afin d'améliorer la vie étudiante, nous avons pensé un outil facile à utiliser et qui permettrait de sonder l'humeur des Yétudiants au sein d'une école.
+            <br></br><br></br>
+            La vie étudiante est un sujet beaucoup trop mis de côté et qui n'est pas que soirée. C'est une période qui peut se révéler très difficile pour de nombreuses raisons, difficultés financières, solitude, etc...
+            <br></br><br></br>
+            C'est pourquoi nous pensons que les Yécoles ont un vrai rôle à jouer dans la détection de cas d'étudiant en difficulté, de plus, dans une démarche d'amélioration continue, l'école peut récupérer l'humeur générale de ces étudiants.
+            <br></br><br></br>
+            Le Ysondage va prendre la forme d'un nuage, sur lequel différentes émotions vont apparaître. L'étudiant aura juste a cliquer sur une ou plusieurs émotions puis à valider son choix. 
+            <br></br><br></br>
+            Afin de garder l'anonymat mais aussi d'éviter les abus, le sondage sera idéalement placé dans un intranet où il est nécessaire d'être connecté pour y accéder. 
             </p>
           </div>
 

@@ -1,9 +1,9 @@
-import { auth } from "../firebase";
 import React, { useEffect, useState } from "react";
-import { onAuthStateChanged, signOut } from "firebase/auth";
 import Navbar from '../components/navbar';
 import SignIn from './LogIn';
 import Cloud from '../components/cloud';
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import '../static/Extranet.css';
 
 
@@ -22,14 +22,6 @@ function Extranet() {
       listen();
     }
   }, [])
-
-  const userSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        console.log('sign out successful')
-      })
-      .catch((error) => console.log(error))
-  }
 
   return (
     <>

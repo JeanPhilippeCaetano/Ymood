@@ -5,6 +5,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import AuthDetails from './components/AuthDetails';
 import AddEmotions from './components/AddEmotions';
+import './App.css';;
 
 function App() {
   return (
@@ -24,5 +25,3 @@ function App() {
 }
 
 export default App;
-
-

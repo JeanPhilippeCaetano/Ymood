@@ -3,7 +3,7 @@ Challenge 48h
 
 Nom du projet: Ymood
 
-Equipe 5
+Equipe 5<br>
 LOCATELLI Bastien - B1 A<br>
 KREUZER Aymeric - B1 B<br>
 SEGURET Emile - B2 A<br>

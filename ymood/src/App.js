@@ -14,6 +14,7 @@ function App() {
         <Route path="/extranet" element={<Extranet />} />
         <Route path="/loginpage" element={<LogIn />} />
         <Route path="/registerpage" element={<SignUp />} />
+        
         <Route path="/admin" element={<Admin/>} />
         <Route path="/services" element={<Services/>} />
       </Routes>

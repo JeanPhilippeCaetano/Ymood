@@ -1,5 +1,5 @@
 import { auth } from "./firebase";
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 
 class AuthProvider {
 
@@ -7,7 +7,7 @@ class AuthProvider {
         this.user = null;
         this.authenticated = false;
 
-        auth.onAuthStateChanged((user) => {
+        onAuthStateChanged(auth, (user) => {
             if (user) {
                 this.user = user;
                 this.authenticated = true;
@@ -20,10 +20,22 @@ class AuthProvider {
 
     async login(email, password) {
         return signInWithEmailAndPassword(auth, email, password)
+        .then((user) => {
+            console.log(user)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
     async register(email, password) {
         return createUserWithEmailAndPassword(auth, email, password)
+        .then((user) => {
+            console.log(user)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
     async logout() {

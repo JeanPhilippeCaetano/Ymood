@@ -12,8 +12,7 @@ const LogIn = () => {
         setTimeout(() => showPopup("hide"), 2000)
     }
 
-    const signIn = (e) => {
-        e.preventDefault();
+    const signIn = () => {
         AuthProvider.login(email, password).catch((error) => {
             console.log(error)
             popup();

@@ -1,15 +1,34 @@
 # Ymood
 Challenge 48h
 
-Nom du projet: Ymood
 
-Equipe 5<br>
-LOCATELLI Bastien - B1 A<br>
-KREUZER Aymeric - B1 B<br>
-SEGURET Emile - B2 A<br>
-CAETANO Jean-Philippe - B2 A 
-<br>ROUMAGNE Hugo - B3 Dev A
-<br>MEIGNIER Tanguy - B3 Dev B
+# <p align="center">Title</p>
+  
+Your description here
+    
+## 🧐 Features    
+- Feature 1
+- Feature 2
+- Feature 3
+        
+## 🛠️ Tech Stack
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+    
+## 🛠️ Install Dependencies    
+```bash
+npm install package-name
+```
+        
+## 🙇 Author
+#### Saurabh Chauhan
+- Twitter: [@saurra3h](https://twitter.com/saurra3h)
+- Github: [@starc007](https://github.com/starc007)
+        
+
+
 
 Le projet est de créer un "nuage" représentant l'humeur générale des étudiants sur la semaine.
 Il sera facilement intégrable.

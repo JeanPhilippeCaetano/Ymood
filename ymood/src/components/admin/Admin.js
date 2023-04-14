@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Input, Form, Select, Divider, Space } from 'antd';
+import React, { useState, useEffect } from "react";
+import { Button, Input, Form, Select, Divider, Space } from "antd";
 
 // function Admin() {
 
@@ -39,7 +39,7 @@ import { Button, Input, Form, Select, Divider, Space } from 'antd';
 //   const handleInputChange = (oldValue, newValue) => {
 //     console.log(keywords);
 //   };
-  
+
 //   const handleSelectChange = (actualValue, newValue) => {
 //     keywords[actualValue] = newValue;
 //     console.log(keywords);
@@ -124,67 +124,79 @@ import { Button, Input, Form, Select, Divider, Space } from 'antd';
 //     </div>
 //   );
 // }
-  
-  function Admin() {
 
-    let array = [
-      {
-        keyword: "joyeux",
-        isPositive: true,
-      },
-      {
-        keyword: "triste",
-        isPositive: false,
-      },
-      {
-        keyword: "inquiet",
-        isPositive: false,
-      },
-      {
-        keyword: "heureux",
-        isPositive: true,
-      },
-      {
-        keyword: "soulagé",
-        isPositive: true,
-      },
-      {
-        keyword: "suicide",
-        isPositive: false,
-      },
-    ];
+function Admin() {
+  let array = [
+    {
+      keyword: "joyeux",
+      isPositive: true,
+    },
+    {
+      keyword: "triste",
+      isPositive: false,
+    },
+    {
+      keyword: "inquiet",
+      isPositive: false,
+    },
+    {
+      keyword: "heureux",
+      isPositive: true,
+    },
+    {
+      keyword: "soulagé",
+      isPositive: true,
+    },
+    {
+      keyword: "suicide",
+      isPositive: false,
+    },
+  ];
 
-    const [keywords, setKeywords] = useState(array);
+  const [keywords, setKeywords] = useState(array);
 
-    const handleKeywordChange = (index, event) => {
-      const newKeywords = [...keywords];
-      newKeywords[index].keyword = event.target.value;
-      setKeywords(newKeywords);
-    };
+  const handleKeywordChange = (index, event) => {
+    const newKeywords = [...keywords];
+    newKeywords[index].keyword = event.target.value;
+    setKeywords(newKeywords);
+  };
 
-    const handleIsPositiveChange = (index, event) => {
-      const newKeywords = [...keywords];
-      newKeywords[index].isPositive = event.target.checked;
-      setKeywords(newKeywords);
-    };
+  const handleIsPositiveChange = (index, event) => {
+    const newKeywords = [...keywords];
+    newKeywords[index].isPositive = event.target.checked;
+    setKeywords(newKeywords);
+  };
 
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log(keywords);
-    };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(keywords);
+  };
 
-    return (
+  const [inputValue, setInputValue] = useState("");
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+  const handleSubmit2 = (event) => {
+    event.preventDefault();
+    console.log(inputValue);
+  };
+
+  return (
+    <div>
       <form onSubmit={handleSubmit}>
         {keywords.map((keyword, index) => (
           <div key={index}>
-            <label htmlFor={`keyword-${index}`}>  Keyword:  </label>
+            <label htmlFor={`keyword-${index}`}> Keyword: </label>
             <input
               type="text"
               id={`keyword-${index}`}
               value={keyword.keyword}
               onChange={(event) => handleKeywordChange(index, event)}
             />
-            <label htmlFor={`isPositive-${index}`}>    Est-ce que c'est positif ? </label>
+            <label htmlFor={`isPositive-${index}`}>
+              {" "}
+              Est-ce que c'est positif ?{" "}
+            </label>
             <input
               type="checkbox"
               id={`isPositive-${index}`}
@@ -195,8 +207,18 @@ import { Button, Input, Form, Select, Divider, Space } from 'antd';
         ))}
         <button type="submit">Submit</button>
       </form>
-    );
-
-  }
+      <form onSubmit={handleSubmit2}>
+        <label htmlFor="inputField">Message sous le nuage :  </label>
+        <input
+          type="text"
+          id="inputField"
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
 
 export default Admin;

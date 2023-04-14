@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Input, Form, Select, Divider } from 'antd';
+import { Button, Input, Form, Select, Divider, Space } from 'antd';
 
 function Admin() {
 
@@ -36,17 +36,40 @@ function Admin() {
       return acc;
     }, {})
   );
+  const { Option } = Select;
+
+  const [selectedValue, setSelectedValue] = useState(false);
+  
 
   const handleInputChange = (keyword, value) => {
+    console.log(keyword);
     setKeywords({
       ...keywords,
       [keyword]: value,
     });
   };
+  const handleSelectChange = (actualValue, newValue) => {
+    console.log(`L EVENT :::   ${newValue}\nVALUE ::: ${actualValue}`);
+    setSelectedValue({
+      ...selectedValue,
+      [actualValue]: newValue,
+    });
+    console.log(selectedValue.actualValue);
+  };
 
-  const handleSubmit = (values) => {
-    console.log(values);
-  }
+  // const handleSubmit = (values) => {
+  //   console.log(values);
+  // }
+  const handleSubmit = (formData) => {
+    const result = {};
+    for (const [key, value] of Object.entries(formData)) {
+      for (const [keyy, valuee] of Object.entries(value)) {
+        console.log(keyy);
+        result[key] = keyy;
+      }
+    }
+    console.log(result);
+  };
 
   const handleMessageSubmit = (value) => {
     console.log(value.message);
@@ -56,43 +79,44 @@ function Admin() {
     <div style={{ paddingLeft: 30, paddingTop: 30 }}>
       <Form
         onFinish={handleSubmit}
+        style={{ width: 350 }}
       >
         <Divider>Entrer les mots clés et leurs valeurs</Divider>
         {array.map((item, index) => {
+          // console.log(item);
           return (
             <div key={index} style={{ display: "flex" }}>
               <Form.Item
                 key={index}
-                name={item.keyword}
-                rules={[
-                  {
-                    required: false,
-                    message: "Please input your username!",
-                  },
-                ]}
+                name={[item.keyword, item.isPositive]}
               >
                 <Input
                   defaultValue={item.keyword}
+                  style={{ width: 225 }}
                   onChange={(e) =>
                     handleInputChange(item.keyword, e.target.value)
                   }
                 />
+                <Select
+                  defaultValue={item.isPositive ? true : false}
+                  layout="vertical"
+                  style={{ width: 125 }}
+                  onChange={(e) =>
+                    handleSelectChange(item.isPositive, e)
+                  }
+                  options={[
+                    {
+                      value: true,
+                      label: "true",
+                    },
+                    {
+                      value: false,
+                      label: "false",
+                    },
+                  ]}
+                >
+                </Select>
               </Form.Item>
-              <Select
-                defaultValue={item.isPositive ? "true" : "false"}
-                layout="vertical"
-                style={{ width: 200 }}
-                options={[
-                  {
-                    value: item.isPositive ? true : false,
-                    label: item.isPositive ? "true" : "false",
-                  },
-                  {
-                    value: item.isPositive ? false : true,
-                    label: item.isPositive ? "false" : "true",
-                  },
-                ]}
-              ></Select>
             </div>
           );
         })}
@@ -102,6 +126,7 @@ function Admin() {
           >
             Valider
           </Button>
+          <Divider></Divider>
         </Form.Item>
       </Form>
       <Divider>Message à afficher sous le nuage</Divider>

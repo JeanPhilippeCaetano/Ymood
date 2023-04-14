@@ -1,70 +1,135 @@
 import React, { useState, useEffect } from 'react';
+import { Button, Input, Form, Select, Divider } from 'antd';
 
 function Admin() {
-  
-  const [emotion, setEmotion] = useState([{ name: '', isPositive: '' }])
 
-  const handleFormChange = (event, index) => {
-    const newValue = event.target.value;
-    const newEmotion = [...emotion];
-    newEmotion[index][name] = newValue;
-    setEmotion(newEmotion);
-  };
- 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(emotion);
-  };
-
-  const addEmotion = () => {
-    setEmotion([...emotion, { name: '', isPositive: '' }]);
-  };
-
-  // array from BDD
   let array = [
     {
       keyword:"joyeux",
-      emotion: true
+      isPositive: true
     },
     {
       keyword:"triste",
-      emotion: false
+      isPositive: false
     },
     {
       keyword:"inquiet",
-      emotion: false
+      isPositive: false
     },
     {
       keyword:"heureux",
-      emotion: true
+      isPositive: true
     },
     {
       keyword:"soulagé",
-      emotion: true
+      isPositive: true
     },
     {
       keyword:"suicide",
-      emotion: false
+      isPositive: false
     }
   ];
 
+  const [keywords, setKeywords] = useState(
+    array.reduce((acc, curr) => {
+      acc[curr.keyword] = curr.keyword;
+      return acc;
+    }, {})
+  );
+
+  const handleInputChange = (keyword, value) => {
+    setKeywords({
+      ...keywords,
+      [keyword]: value,
+    });
+  };
+
+  const handleSubmit = (values) => {
+    console.log(values);
+  }
+
+  const handleMessageSubmit = (value) => {
+    console.log(value.message);
+  }
+
   return (
-    <div>
-      <h1>Page d'administration</h1>
-      <form onSubmit={handleSubmit}>
-        {array.map((name, index) => (
-          <div key={index}>
-            <input type="text" value={name.keyword} onChange={(e) => handleFormChange(e, index)} required></input>
-            <select onChange={(e) => handleFormChange(e, index)}>
-              <option value={ name.emotion ? true : false } >{ name.emotion ? 'positif' : 'negatif' }</option>
-              <option value={ name.emotion ? false : true } >{ name.emotion ? 'negatif' : 'positif' }</option>
-            </select>
-          </div>
-        ))}
-        <input type="submit" value="Valider les changements" onClick={addEmotion}></input>
-      </form>
+    <div style={{ paddingLeft: 30, paddingTop: 30 }}>
+      <Form
+        onFinish={handleSubmit}
+      >
+        <Divider>Entrer les mots clés et leurs valeurs</Divider>
+        {array.map((item, index) => {
+          return (
+            <div key={index} style={{ display: "flex" }}>
+              <Form.Item
+                key={index}
+                name={item.keyword}
+                rules={[
+                  {
+                    required: false,
+                    message: "Please input your username!",
+                  },
+                ]}
+              >
+                <Input
+                  defaultValue={item.keyword}
+                  onChange={(e) =>
+                    handleInputChange(item.keyword, e.target.value)
+                  }
+                />
+              </Form.Item>
+              <Select
+                defaultValue={item.isPositive ? "true" : "false"}
+                layout="vertical"
+                style={{ width: 200 }}
+                options={[
+                  {
+                    value: item.isPositive ? true : false,
+                    label: item.isPositive ? "true" : "false",
+                  },
+                  {
+                    value: item.isPositive ? false : true,
+                    label: item.isPositive ? "false" : "true",
+                  },
+                ]}
+              ></Select>
+            </div>
+          );
+        })}
+        <Form.Item>
+          <Button
+            htmlType="submit"
+          >
+            Valider
+          </Button>
+        </Form.Item>
+      </Form>
+      <Divider>Message à afficher sous le nuage</Divider>
+      <Form
+        onFinish={handleMessageSubmit}
+      >
+        <Form.Item
+          name="message"
+        >
+          <Input
+            placeholder="Message à afficher sous le nuage"
+            onChange={(e) =>
+              handleInputChange("", e.target.value)
+            }
+          />
+        </Form.Item>
+        <Form.Item>
+          <Button
+            htmlType="submit"
+          >
+            Valider
+          </Button>
+        </Form.Item>
+      </Form>
+      <Divider />
     </div>
   );
 }
+  
 
 export default Admin;

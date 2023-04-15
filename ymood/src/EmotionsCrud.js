@@ -22,15 +22,6 @@ class EmotionsCrud extends React.Component {
             }
         }
     }
-
-    componentDidUpdate() {
-        const ref = ref(db,"/values/");
-        ref.on("value", (snapshot) => {
-          const data = snapshot.val();
-          this.setState({ data });
-        });
-      }
-
     initAdmins() {
         set(ref(this.state.database, "/admins/"), this.admins)
     }
@@ -55,16 +46,20 @@ class EmotionsCrud extends React.Component {
         delete(ref(this.state.database, path), emotion)
     }
 
-    async readData(path) {
-        return get(ref(this.state.database, path)).then((snapshot) => {
+    readData(path) {
+        const promise = get(ref(this.state.database, path))
+        .then(async(snapshot) => {
             if (snapshot.exists()) {
                 return snapshot.val()
             } else {
-                return 0;
+                throw await snapshot;
             }
-          }).catch((error) => {
-            console.error(error);
+        })
+        .then(dt => {return dt})
+        .catch((error) => {
+          console.error(error);
           });
+        return promise
     }
    
 }

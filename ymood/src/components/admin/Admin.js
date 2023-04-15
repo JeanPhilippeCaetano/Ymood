@@ -5,6 +5,8 @@ import { CategoryScale } from "chart.js";
 import BarChart from './bar-chart.js';
 import { func } from 'prop-types';
 import { async } from 'q';
+import Navbar from '../../components/navbar';
+
 
 function Admin() {
 
@@ -332,6 +334,8 @@ function Admin() {
   }
 
   return (
+    <div>
+      <Navbar />
     <div style={{ paddingLeft: 30, paddingTop: 30 }}>
       <Form
         onFinish={handleSubmit}
@@ -415,6 +419,7 @@ function Admin() {
       <div id='chart-div'>
         <Dataviz/>
       </div>
+    </div>
     </div>
   );
 }

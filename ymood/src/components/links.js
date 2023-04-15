@@ -1,3 +1,5 @@
+import PDF from '../assets/Ymood.pdf'
+
 const Links = () => {
     return (
         <>
@@ -20,7 +22,7 @@ const Links = () => {
                         <div className="card-body">
                             <h5 className="card-title">PDF</h5>
                             <p className="card-text">Téléchargez notre dossier technique au format PDF.</p>
-                            <a href="mondossiertechnique.pdf" className="btn btn-primary">Télécharger</a>
+                            <a href={PDF} className="btn btn-primary">Télécharger</a>
                         </div>
                     </div>
                 </div>

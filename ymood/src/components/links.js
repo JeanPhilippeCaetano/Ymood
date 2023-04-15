@@ -13,7 +13,7 @@ const Links = () => {
                         <div className="card-body">
                             <h5 className="card-title">Github</h5>
                             <p className="card-text">Consultez notre code source et notre organisation sur Github.</p>
-                            <a href="https://github.com/JeanPhilippeCaetano/Ymood/tree/main/ymood" className="btn btn-primary">Visiter</a>
+                            <a href="https://github.com/JeanPhilippeCaetano/Ymood" className="btn btn-primary">Visiter</a>
                         </div>
                     </div>
                 </div>

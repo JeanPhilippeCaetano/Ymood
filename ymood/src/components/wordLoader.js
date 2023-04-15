@@ -17,7 +17,6 @@ const align = ["start","end","center"]
 const justify = [{marginTop:"auto"},{marginBottom:"auto"},{}]
 
 export function displayContent(emotions){
-    console.log(emotions)
     const AreaSize = calcContainerSize();
     const emotionsWeight = getFullWeight(emotions);
     const limit = emotionsWeight/3;

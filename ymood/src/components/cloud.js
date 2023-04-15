@@ -1,5 +1,5 @@
 import React from 'react';
-import { displayContent } from './wordloader';
+import { displayContent } from './wordLoader';
 
 function Cloud() {
     const emotions = [

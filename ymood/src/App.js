@@ -16,12 +16,9 @@ function App() {
         <Route path="/registerpage" element={<SignUp />} />
         
         <Route path="/admin" element={<Admin/>} />
-        <Route path="/services" element={<Services/>} />
       </Routes>
     </div>
   )
 }
 
 export default App;
-
-
